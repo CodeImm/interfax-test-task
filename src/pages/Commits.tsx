@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom';
 
 export default function CommitsPage() {
-  const { userId, repoId } = useParams();
+  const { username, repo } = useParams();
 
   return (
     <main style={{ padding: '1rem 0' }}>
       <h2>
-        Repo {userId} - {repoId}
+        Repo {username} - {repo}
       </h2>
     </main>
   );

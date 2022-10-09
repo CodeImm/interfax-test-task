@@ -1,12 +1,12 @@
 import { useParams } from 'react-router-dom';
 
 export default function ProfilePage() {
-  const { userId } = useParams();
+  const { username } = useParams();
 
-  console.log(userId);
+  console.log(username);
   return (
     <main style={{ padding: '1rem 0' }}>
-      <h2>Profile {userId}</h2>
+      <h2>Profile {username}</h2>
     </main>
   );
 }
