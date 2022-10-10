@@ -1,14 +1,21 @@
 import { SVGProps } from 'react';
+import classNames from 'classnames';
 
 interface Props extends SVGProps<SVGSVGElement> {}
 
-function LoopIcon({ stroke = 'currentColor', ...props }: Props) {
+function LoopIcon({
+  stroke = 'currentColor',
+  fill = 'none',
+  className,
+  ...props
+}: Props) {
   return (
     <svg
-      fill="none"
+      fill={fill}
       stroke={stroke}
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      className={classNames('flex-shrink-0 inline', className)}
       {...props}
     >
       <path
