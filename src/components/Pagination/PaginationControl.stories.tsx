@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import NextIcon from 'components/icons/Next';
+import ChevronRight from 'components/icons/ChevronRight';
 
 import PaginationControl from './Control';
 
@@ -28,7 +28,7 @@ Active.args = {
 
 export const RoundedDisabled = Template.bind({});
 RoundedDisabled.args = {
-  children: <NextIcon />,
+  children: <ChevronRight className="w-5 h-5" />,
   className: 'rounded-r-lg',
   disabled: true,
 };

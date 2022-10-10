@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 interface Props extends SVGProps<SVGSVGElement> {}
 
-function NextIcon({
+function ChevronRight({
   className,
   fill = 'currentColor',
   stroke = 'currentColor',
@@ -12,7 +12,7 @@ function NextIcon({
   return (
     <svg
       aria-hidden="true"
-      className={classNames('w-5 h-5 flex-shrink-0 inline', className)}
+      className={classNames('flex-shrink-0 inline', className)}
       fill={fill}
       viewBox="0 0 20 20"
       xmlns="http://www.w3.org/2000/svg"
@@ -26,4 +26,4 @@ function NextIcon({
     </svg>
   );
 }
-export default NextIcon;
+export default ChevronRight;

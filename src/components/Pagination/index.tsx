@@ -1,5 +1,5 @@
-import NextIcon from 'components/icons/Next';
-import PrevIcon from 'components/icons/Prev';
+import ChevronRight from 'components/icons/ChevronRight';
+import ChevronLeftIcon from 'components/icons/ChevronLeft';
 import PaginationControl from 'components/Pagination/Control';
 
 interface Props {
@@ -19,7 +19,7 @@ function Pagination({ count, page, onChange }: Props) {
             onClick={() => onChange(page - 1)}
             srText="Предыдущая"
           >
-            <PrevIcon />
+            <ChevronLeftIcon className="w-5 h-5" />
           </PaginationControl>
         </li>
         {new Array(count).fill(undefined).map((_page, index) => (
@@ -39,7 +39,7 @@ function Pagination({ count, page, onChange }: Props) {
             onClick={() => onChange(page + 1)}
             srText="Следующая"
           >
-            <NextIcon />
+            <ChevronRight className="w-5 h-5" />
           </PaginationControl>
         </li>
       </ul>
