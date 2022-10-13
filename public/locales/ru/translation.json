@@ -1,0 +1,144 @@
+{
+  "root_domain": "Keycap",
+  "tld": "pro",
+  "home": "Главная",
+  "exercises": "Упражнения",
+  "testing": "Тестирование",
+  "my_account": "Мой аккаунт",
+  "account_settings": "Настройки аккаунта",
+  "donate": "Поддержать проект",
+  "login": "Вход",
+  "log_in": "Войти",
+  "log_out": "Выйти",
+  "sign_up": "Зарегистрироваться",
+  "signup": "Регистрация",
+
+  "forgotPassword": "Забыли пароль?",
+  "register": "Зарегистрироваться",
+  "doNotHaveAnAccount": "Еще нет аккаунта?",
+  "signUpNow": "Зарегистрироваться",
+  "email": "Почта",
+  "password": "Пароль",
+
+  "keyboardSetup": "Настройка клавиатуры",
+
+  "labels": {
+    "language": "Язык",
+    "layout": "Раскладка",
+    "keyboard": "Формат",
+    "keyboardStandard": "Формат клавиатуры: "
+  },
+
+  "newPassword": "Новый пароль",
+  "oldPassword": "Старый пароль",
+  "changePassword": "Изменение пароля",
+  "savePassword": "Изменить пароль",
+
+  "have_an_account": "Есть аккаунт?",
+
+  "password_resetting": "Сброс пароля",
+  "reset_password": "Сбросить пароль",
+
+  "formErrors": {
+    "incorrect_email": "Некорректный email",
+    "password_min_length": "Incorrect password. All passwords must be at least 6 characters.",
+    "password_max_length": "Incorrect password. All passwords must be at least 6 characters."
+  },
+
+  "totalWorkingTime": "Oбщее время работы",
+  "accuracy": "Точность",
+  "averageReaction": "Среднее время нажатия",
+  "numKeystrokes": "Всего нажатий",
+  "numCorrectKeystrokes": "Верных нажатий",
+  "numWrongMissedKeystrokes": "Ошибок (пропусков)",
+  "totalTime": "Общее время",
+  "ms": "мс",
+
+  "keys": "Клавиши",
+  "characters": "Символы",
+  "basic": "Базовые",
+  "custom": "Мои",
+
+  "yourLayout": "Ваша раскладка",
+  "emulated": "Эмуляция",
+  "notEmulated": "Без эмуляции",
+
+  "tesitng": "Тест набора",
+  "toStart": "[пробел] -",
+  "start": "начать",
+  "toContinue": "[пробел] -",
+  "continue": "продолжить",
+  "startContinue": "начать/продолжить",
+  "toPause": "[shift + пробел] -",
+  "pause": "сделать паузу",
+  "toActivate": "Нажмите, чтобы",
+  "activate": "активировать",
+  "chooseCharacterСlasses": "Выберите классы символов, которые вы хотите протестировать",
+  "letters": "Буквы",
+  "digits": "Цифры",
+  "symbols": "Спец. символы",
+  "caseSensitive": "Учитывать регистр",
+  "pleaseChooseAtLeastOneCharacterClass": "Пожалуйста, выберите хотя бы один класс символов",
+  "totalKeystrokes": "Всего нажатий",
+  "correctKeystrokes": "Верных нажатий",
+  "wrongMissedKeystrokes": "Ошибок (пропусков)",
+  "confirm": "Подтвердить",
+  "notAvailable": "Н/Д",
+  "testResults": "Результаты теста",
+
+  "initialKeyboardSetupWarning": "Необходимо выполнить начальную настройку клавиатуры.",
+  "feedback": "Обратная связь",
+
+  "title": "Welcome to react using react-i18next",
+  "description": {
+    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+    "part2": "Switch language between english and german using buttons above."
+  },
+  "rememberMe": "Remember me",
+  "signIn": "Войти",
+  "next": "Далее",
+
+  "join": "Join",
+  "create_an_account": "Create an account",
+  "password_length_error": "Your password must be at least 6 characters",
+  "stay_signed_in": "Stay Signed In",
+  "languages": {
+    "en": "Английский",
+    "ru": "Русский"
+  },
+  "logicalLayouts": {
+    "us_qwerty": "US QWERTY",
+    "uk_qwerty": "UK QWERTY",
+    "dvorak": "DVORAK",
+    "colemak": "COLEMAK",
+    "jcuken": "ЙЦУКЕН",
+    "workman": "WORKMAN",
+    "yashert": "ЯШЕРТЫ (мнемоническая)"
+  },
+  "physicalLayouts": {
+    "iso": "ISO",
+    "ansi": "ANSI"
+  },
+  "lessonTitles": {
+    "index1": "Указательные (Ⅰ)",
+    "index2": "Указательные (Ⅱ)",
+    "index_all": "Указательные (все)",
+    "middle": "Средние",
+    "ring": "Безымянные",
+    "pinky1": "Мизинцы (Ⅰ)",
+    "pinky2": "Мизинцы (Ⅱ)",
+    "pinky3": "Мизинцы (Ⅲ)",
+    "pinky_all": "Мизинцы (все)",
+    "index1_pinky1": "Указательные/Мизинцы (Ⅰ)",
+    "index2_middle": "Указательные/Средние",
+    "ring_middle": "Безымянные/Средние",
+    "ring_pinky1": "Безымянные/Мизинцы",
+    "index2_pinky2": "Указательные/Мизинцы (Ⅱ)",
+    "number_row_1": "Цифровой ряд (Ⅰ)",
+    "number_row_2": "Цифровой ряд (Ⅱ)",
+    "number_row_all": "Цифровой ряд (все)",
+    "number_row_shift_1": "Цифровой ряд (Shift Ⅰ)",
+    "number_row_shift_2": "Цифровой ряд (Shift Ⅱ)",
+    "number_row_shift_all": "Цифровой ряд (Shift все)"
+  }
+}
