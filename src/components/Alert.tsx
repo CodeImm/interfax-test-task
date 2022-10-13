@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 
-import InfoIcon from 'components/icons/Info';
+import InfoIcon from 'components/icons/InfoIcon';
 
 type SeverityType = 'dark' | 'danger' | 'info' | 'success' | 'warning';
 

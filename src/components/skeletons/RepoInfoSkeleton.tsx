@@ -2,7 +2,7 @@ import { HTMLAttributes } from 'react';
 
 import classNames from 'classnames';
 
-import GitBranchIcon from 'components/icons/GitBranch';
+import GitBranchIcon from 'components/icons/GitBranchIcon';
 import Skeleton from 'components/skeletons/Skeleton';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}

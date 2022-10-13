@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import UserHeroSkeleton from './UserHero';
+import UserHeroSkeleton from './UserHeroSkeleton';
 
 export default {
   title: 'Skeletons/UserHero',

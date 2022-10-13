@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import SpinnerIcon from './Spinner';
+import SpinnerIcon from './SpinnerIcon';
 
 export default {
   title: 'Icons/Spinner',

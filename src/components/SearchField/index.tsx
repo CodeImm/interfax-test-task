@@ -1,9 +1,9 @@
 import { forwardRef, HTMLProps } from 'react';
 import { UseFormRegister } from 'react-hook-form';
 
-import LoopIcon from 'components/icons/Loop';
+import LoopIcon from 'components/icons/LoopIcon';
 import Button from 'components/SearchField/Button';
-import InputAdornment from 'components/SearchField/InputAdornment';
+import InputAdornment from 'components/InputAdornment';
 import { SearchForm } from 'pages/Home';
 import Label from 'components/SearchField/Label';
 
@@ -21,7 +21,7 @@ const SearchField = forwardRef<
         {label}
       </Label>
       <div className="relative">
-        <InputAdornment>
+        <InputAdornment className="absolute inset-y-0 left-0 pl-3">
           <LoopIcon
             className="w-5 h-5 text-gray-500 dark:text-gray-400"
             aria-hidden="true"

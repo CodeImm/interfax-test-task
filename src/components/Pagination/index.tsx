@@ -1,5 +1,5 @@
-import ChevronRight from 'components/icons/ChevronRight';
-import ChevronLeftIcon from 'components/icons/ChevronLeft';
+import ChevronRightIcon from 'components/icons/ChevronRightIcon';
+import ChevronLeftIcon from 'components/icons/ChevronLeftIcon';
 import PaginationControl from 'components/Pagination/Control';
 
 interface Props {
@@ -23,7 +23,7 @@ function Pagination({ count, page, onChange }: Props) {
           </PaginationControl>
         </li>
         {new Array(count).fill(undefined).map((_page, index) => (
-          <li>
+          <li key={index}>
             <PaginationControl
               onClick={() => onChange(index + 1)}
               active={page === index + 1}
@@ -39,7 +39,7 @@ function Pagination({ count, page, onChange }: Props) {
             onClick={() => onChange(page + 1)}
             srText="Следующая"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRightIcon className="w-5 h-5" />
           </PaginationControl>
         </li>
       </ul>

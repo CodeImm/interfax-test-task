@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import AvatarSceleton from './Avatar';
+import AvatarSceleton from './AvatarSceleton';
 
 export default {
   title: 'Skeletons/Avatar',

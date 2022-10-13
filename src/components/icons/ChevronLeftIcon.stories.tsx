@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import ChevronLeftIcon from './ChevronLeft';
+import ChevronLeftIcon from './ChevronLeftIcon';
 
 export default {
   title: 'Icons/ChevronLeft',

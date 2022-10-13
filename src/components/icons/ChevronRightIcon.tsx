@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 interface Props extends SVGProps<SVGSVGElement> {}
 
-function ChevronRight({
+function ChevronRightIcon({
   className,
   fill = 'currentColor',
   stroke = 'currentColor',
@@ -26,4 +26,4 @@ function ChevronRight({
     </svg>
   );
 }
-export default ChevronRight;
+export default ChevronRightIcon;

@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import GitBranchIcon from './GitBranch';
+import GitBranchIcon from './GitBranchIcon';
 
 export default {
   title: 'Icons/GitBranchIcon',

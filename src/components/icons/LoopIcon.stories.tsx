@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import LoopIcon from './Loop';
+import LoopIcon from './LoopIcon';
 
 export default {
   title: 'Icons/Loop',

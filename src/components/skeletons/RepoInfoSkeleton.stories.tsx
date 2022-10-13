@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import RepoInfoSkeleton from './RepoInfo';
+import RepoInfoSkeleton from './RepoInfoSkeleton';
 
 export default {
   title: 'Skeletons/RepoInfo',

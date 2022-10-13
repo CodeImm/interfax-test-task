@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react';
 
-import AvatarSceleton from 'components/skeletons/Avatar';
+import AvatarSceleton from 'components/skeletons/AvatarSceleton';
 import Skeleton from 'components/skeletons/Skeleton';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {}

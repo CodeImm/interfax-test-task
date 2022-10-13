@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import InfoIcon from './Info';
+import InfoIcon from './InfoIcon';
 
 export default {
   title: 'Icons/Info',
