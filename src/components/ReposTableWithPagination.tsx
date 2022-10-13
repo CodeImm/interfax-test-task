@@ -1,6 +1,7 @@
 import { HTMLAttributes } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 
 import Skeleton from 'components/skeletons/Skeleton';
 import TableBody from 'components/Table/TableBody';
@@ -31,6 +32,8 @@ function ReposTableWithPagination({
   onPageChange,
   ...props
 }: Props) {
+  const { t } = useTranslation();
+
   return (
     <>
       <Table
@@ -43,16 +46,16 @@ function ReposTableWithPagination({
         <TableHead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <TableRow>
             <TableCell component="th" scope="col" className="py-3 px-6">
-              Наименование
+              {t('name')}
             </TableCell>
             <TableCell component="th" scope="col" className="py-3 px-6">
-              Язык программирования
+              {t('programmingLanguage')}
             </TableCell>
             <TableCell component="th" scope="col" className="py-3 px-6">
-              Описание
+              {t('description')}
             </TableCell>
             <TableCell component="th" scope="col" className="py-3 px-6">
-              Количество звезд
+              {t('stargazersCount')}
             </TableCell>
           </TableRow>
         </TableHead>

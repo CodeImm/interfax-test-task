@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import App from './App';
 import './index.css';
+import 'i18n/config';
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -1,5 +1,6 @@
 import { forwardRef, HTMLProps } from 'react';
 import { UseFormRegister } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 
 import LoopIcon from 'components/icons/LoopIcon';
 import Button from 'components/SearchField/Button';
@@ -15,6 +16,8 @@ const SearchField = forwardRef<
   HTMLInputElement,
   Props & ReturnType<UseFormRegister<SearchForm>>
 >(({ id, label, ...props }, ref) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Label htmlFor={id} className="sr-only">
@@ -27,7 +30,6 @@ const SearchField = forwardRef<
             aria-hidden="true"
           />
         </InputAdornment>
-        {/* TODO: сделать отдельный компонент */}
         <input
           id={id}
           type="search"
@@ -36,7 +38,7 @@ const SearchField = forwardRef<
           ref={ref}
         />
         <Button className="absolute right-2.5 bottom-2.5" type="submit">
-          Найти
+          {t('search')}
         </Button>
       </div>
     </>

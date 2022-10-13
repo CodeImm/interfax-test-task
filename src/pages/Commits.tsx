@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 import CommitsTable from 'components/CommitsTable';
 import ArrowLeftIcon from 'components/icons/ArrowLeftIcon';
@@ -20,6 +21,8 @@ const PER_PAGE_DEFAULT = 30;
 export default function ProfilePage() {
   const { username, repo } = useParams();
 
+  const { t } = useTranslation();
+
   const [commits, setCommits] = useState<GithubCommitsResp['data']>([]);
   const [page, setPage] = useState(1);
   const [isAllCommitsloaded, setIsAllCommitsloaded] = useState(false);
@@ -37,9 +40,9 @@ export default function ProfilePage() {
     {
       onError: (error: Error) => {
         if (error.message === 'Failed to fetch') {
-          toast.error('Ошибка загрузки');
+          toast.error(t('failedToFetch'));
         } else if (error.message === 'Not Found') {
-          error.message = `Репозиторий не найден`;
+          error.message = t('repositoryNotFound');
           toast.error(error.message);
         } else {
           toast.error(error.message);
@@ -58,9 +61,9 @@ export default function ProfilePage() {
     {
       onError: (error: Error) => {
         if (error.message === 'Git Repository is empty.') {
-          error.message = `Репозиторий пуст`;
+          error.message = t('repositoryIsEmpty');
         } else {
-          error.message = 'Ошибка загрузки';
+          error.message = t('failedToFetch');
         }
       },
       onSuccess: (data) => {
@@ -85,7 +88,7 @@ export default function ProfilePage() {
               to={`/${username}`}
               startIcon={<ArrowLeftIcon className="w-4 h-4" />}
             >
-              Назад
+              {t('backward')}
             </NavButton>
           </nav>
           <div>
@@ -106,13 +109,10 @@ export default function ProfilePage() {
               data={commits}
               isLoading={!commits.length && (isLoading || isFetching)}
             />
-            {!(isLoading || isFetching) && commits.length === 0 && !isError && (
-              <Alert severity="dark">Репозиторий пуст</Alert>
-            )}
             {isError && (
               <Alert
                 severity={
-                  error.message === 'Репозиторий пуст' ? 'dark' : 'danger'
+                  error.message === t('repositoryIsEmpty') ? 'dark' : 'danger'
                 }
               >
                 {error.message}
@@ -127,7 +127,7 @@ export default function ProfilePage() {
                   }}
                   loading={isLoading || isFetching}
                 >
-                  Загрузить ещё
+                  {t('downloadMore')}
                 </LoadingButton>
               </div>
             )}

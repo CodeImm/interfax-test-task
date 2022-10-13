@@ -1,6 +1,7 @@
 import { useMutation } from 'react-query';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 import Alert from 'components/Alert';
 import SpinnerIcon from 'components/icons/SpinnerIcon';
@@ -16,6 +17,8 @@ export interface SearchForm {
 }
 
 export default function HomePage() {
+  const { t } = useTranslation();
+
   const { register, handleSubmit } = useForm<SearchForm>();
 
   const onSubmit = handleSubmit(({ username }) => {
@@ -29,10 +32,12 @@ export default function HomePage() {
     {
       onError: (error: Error, variables) => {
         if (error.message === 'Failed to fetch') {
-          toast.error('Ошибка загрузки');
+          toast.error(t('failedToFetch'));
           error.message = '';
         } else if (error.message === 'Not Found') {
-          error.message = `Пользователь "${variables.username}" не найден. Попробуйте найти другого пользователя в системе github.com`;
+          error.message = t('userNotFoundTryAgain', {
+            username: variables.username,
+          });
         } else {
           toast.error(error.message);
           error.message = '';
@@ -46,15 +51,15 @@ export default function HomePage() {
       <PageContainer>
         <div className="mb-10 w-full max-w-md space-y-8">
           <h1 className="mb-2 text-center text-xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
-            Поиск пользователя{' '}
+            {t('userSearchOn')}{' '}
             <mark className="px-2 text-white bg-gray-700 rounded dark:bg-blue-500">
-              github.com
+              {t('github')}
             </mark>
           </h1>
           <form onSubmit={onSubmit}>
             <SearchField
-              label="Найти"
-              placeholder="Введите имя пользователя"
+              label={t('search')}
+              placeholder={t('enterUserName')}
               {...register('username', { required: true })}
             />
           </form>

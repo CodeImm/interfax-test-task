@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useTranslation } from 'react-i18next';
 
 import Alert from 'components/Alert';
 import ArrowLeftIcon from 'components/icons/ArrowLeftIcon';
@@ -18,6 +19,8 @@ const PER_PAGE_DEFAULT = 30;
 export default function ProfilePage() {
   const { username } = useParams();
 
+  const { t } = useTranslation();
+
   const [numPages, setNumPages] = useState<number>(0);
   const [page, setPage] = useState(1);
 
@@ -33,9 +36,9 @@ export default function ProfilePage() {
       },
       onError: (error: Error) => {
         if (error.message === 'Failed to fetch') {
-          toast.error('Ошибка загрузки');
+          toast.error(t('failedToFetch'));
         } else if (error.message === 'Not Found') {
-          error.message = `Пользователь не найден`;
+          error.message = t('userNotFound');
           toast.error(error.message);
         } else {
           toast.error(error.message);
@@ -67,7 +70,7 @@ export default function ProfilePage() {
       <PageContainer>
         <nav className="md:container flex mb-5 justify-self-start">
           <NavButton to="/" startIcon={<ArrowLeftIcon className="w-4 h-4" />}>
-            К поиску
+            {t('toSearchPage')}
           </NavButton>
         </nav>
         {isLoading ? (
@@ -78,7 +81,7 @@ export default function ProfilePage() {
               <UserHero
                 className="mb-8"
                 avatarUrl={data?.avatar_url}
-                alt="Аватар"
+                alt={t('avatar')}
                 login={data?.login}
                 name={data?.name}
               />
@@ -87,9 +90,7 @@ export default function ProfilePage() {
         )}
         <div className="md:container mx-auto">
           {repos?.length === 0 ? (
-            <Alert severity="dark">
-              У пользователя нет публичных репозиториев.
-            </Alert>
+            <Alert severity="dark">{t('publicRepositoriesNotFound')}</Alert>
           ) : (
             <div>
               <ReposTableWithPagination
@@ -100,7 +101,9 @@ export default function ProfilePage() {
                 numPages={numPages}
                 onPageChange={setPage}
               />
-              {isReposError && <Alert severity="danger">Ошибка загрузки</Alert>}
+              {isReposError && (
+                <Alert severity="danger">{t('failedToFetch')}</Alert>
+              )}
             </div>
           )}
         </div>

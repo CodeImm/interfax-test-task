@@ -1,5 +1,6 @@
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 
 import Skeleton from 'components/skeletons/Skeleton';
 import TableBody from 'components/Table/TableBody';
@@ -18,6 +19,7 @@ interface Props extends HTMLAttributes<HTMLTableElement> {
 }
 
 function CommitsTable({ className, data, isLoading, ...props }: Props) {
+  const { t } = useTranslation();
   return (
     <Table
       className={classNames(
@@ -29,13 +31,13 @@ function CommitsTable({ className, data, isLoading, ...props }: Props) {
       <TableHead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <TableRow>
           <TableCell component="th" scope="col" className="py-3 px-6">
-            Автор
+            {t('author')}
           </TableCell>
           <TableCell component="th" scope="col" className="py-3 px-6">
-            Хэш коммита
+            {t('commitHash')}
           </TableCell>
           <TableCell component="th" scope="col" className="py-3 px-6">
-            Дата (YYYY-MM-DD)
+            {t('date')}
           </TableCell>
         </TableRow>
       </TableHead>

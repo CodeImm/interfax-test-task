@@ -1,5 +1,6 @@
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
 
 import GitBranchIcon from 'components/icons/GitBranchIcon';
 
@@ -16,6 +17,8 @@ function RepoInfo({
   defaultBranch,
   ...props
 }: Props) {
+  const { t } = useTranslation();
+
   return (
     <div
       className={classNames(
@@ -35,7 +38,7 @@ function RepoInfo({
 
       <div className="inline-flex items-center">
         <>
-          <span className="pr-2">Branch:</span>
+          <span className="pr-2">{t('branch')}:</span>
           <GitBranchIcon className="w-4 h-4 mr-0.5" stroke="#57606a" />
           {defaultBranch}
         </>
