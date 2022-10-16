@@ -9,7 +9,7 @@ function AvatarSceleton({ className, fill = 'currentColor', ...props }: Props) {
       className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center"
     >
       <svg
-        className={`text-gray-200 dark:text-gray-700 ${className}`}
+        className={`text-gray-200 ${className}`}
         aria-hidden="true"
         fill={fill}
         viewBox="0 0 20 20"

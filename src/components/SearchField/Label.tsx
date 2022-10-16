@@ -11,7 +11,7 @@ interface Props
 function Label({ children, className, ...props }: Props) {
   return (
     <label
-      className={`mb-2 text-sm font-medium text-gray-900 dark:text-gray-300 ${className}`}
+      className={`mb-2 text-sm font-medium text-gray-900 ${className}`}
       {...props}
     >
       {children}

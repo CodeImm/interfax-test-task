@@ -22,16 +22,16 @@ function RepoInfo({
   return (
     <div
       className={classNames(
-        'w-full text-sm text-left text-gray-500 dark:text-gray-400',
+        'w-full text-sm text-left text-gray-500',
         className
       )}
       {...props}
     >
       <div className="mb-3">
-        <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="mb-2 text-lg font-bold tracking-tight text-gray-900">
           {fullName}
         </h5>
-        <p className="font-normal text-sm text-gray-700 dark:text-gray-400">
+        <p className="font-normal text-sm text-gray-700">
           {description}
         </p>
       </div>

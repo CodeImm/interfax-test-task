@@ -38,12 +38,12 @@ function ReposTableWithPagination({
     <>
       <Table
         className={classNames(
-          'mb-4 text-sm text-left text-gray-500 dark:text-gray-400',
+          'mb-4 text-sm text-left text-gray-500',
           className
         )}
         {...props}
       >
-        <TableHead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <TableHead className="text-xs text-gray-700 uppercase bg-gray-50">
           <TableRow>
             <TableCell component="th" scope="col" className="py-3 px-6">
               {t('name')}
@@ -64,12 +64,12 @@ function ReposTableWithPagination({
             ? new Array(5).fill(undefined).map((_row, index) => (
                 <TableRow
                   key={index}
-                  className="bg-white border-b hover:bg-gray-50 dark:hover:bg-gray-600"
+                  className="bg-white border-b hover:bg-gray-50"
                 >
                   <TableCell
                     component="th"
                     scope="row"
-                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap"
                   >
                     <Skeleton />
                   </TableCell>
@@ -87,12 +87,12 @@ function ReposTableWithPagination({
             : data?.map((repo) => (
                 <TableRow
                   key={repo.name}
-                  className="bg-white border-b hover:bg-gray-50 dark:hover:bg-gray-600"
+                  className="bg-white border-b hover:bg-gray-50"
                 >
                   <TableCell
                     component="th"
                     scope="row"
-                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap"
                   >
                     <Link
                       to={`/${username}/${repo.name}`}

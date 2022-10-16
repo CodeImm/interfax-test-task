@@ -6,14 +6,14 @@ import InfoIcon from 'components/icons/InfoIcon';
 type SeverityType = 'dark' | 'danger' | 'info' | 'success' | 'warning';
 
 const SEVERITY_MAPS: Record<SeverityType, string> = {
-  dark: 'text-gray-700 bg-gray-100 rounded-lg dark:bg-gray-700 dark:text-gray-300',
+  dark: 'text-gray-700 bg-gray-100 rounded-lg',
   danger:
-    'text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800',
-  info: ' text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800',
+    'text-red-700 bg-red-100 rounded-lg',
+  info: ' text-blue-700 bg-blue-100 rounded-lg',
   success:
-    'text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800',
+    'text-green-700 bg-green-100 rounded-lg',
   warning:
-    'text-yellow-700 bg-yellow-100 rounded-lg dark:bg-yellow-200 dark:text-yellow-800',
+    'text-yellow-700 bg-yellow-100 rounded-lg',
 };
 
 interface Props {

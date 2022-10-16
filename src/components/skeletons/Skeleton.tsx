@@ -17,7 +17,7 @@ function Skeleton({
     >
       <div
         className={classNames(
-          'bg-gray-200 rounded-md dark:bg-gray-700',
+          'bg-gray-200 rounded-md',
           className
         )}
         {...props}

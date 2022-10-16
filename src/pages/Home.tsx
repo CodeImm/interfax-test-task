@@ -50,9 +50,9 @@ export default function HomePage() {
     <>
       <PageContainer>
         <div className="mb-10 w-full max-w-md space-y-8">
-          <h1 className="mb-2 text-center text-xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
+          <h1 className="mb-2 text-center text-xl font-extrabold tracking-tight leading-none text-gray-900">
             {t('userSearchOn')}{' '}
-            <mark className="px-2 text-white bg-gray-700 rounded dark:bg-blue-500">
+            <mark className="px-2 text-white bg-gray-700 rounded">
               {t('github')}
             </mark>
           </h1>

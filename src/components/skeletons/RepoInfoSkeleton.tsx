@@ -11,7 +11,7 @@ function RepoInfoSkeleton({ className, ...props }: Props) {
   return (
     <div
       className={classNames(
-        'w-full text-sm text-left text-gray-500 dark:text-gray-400',
+        'w-full text-sm text-left text-gray-500',
         className
       )}
       {...props}
